@@ -1,0 +1,44 @@
+/*清除浏览器默认样式 start*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Microsoft YaHei',sans-serif;
+}
+li {
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6,b,strong{
+    font-weight:normal;
+    font-size: 16px;
+}
+i,em{
+    font-style:normal;
+}
+a{
+    text-decoration:none;
+    color:#000;
+}
+li img,div img{
+    vertical-align:top;
+}
+/*清除浏览器默认样式 end*/
+
+/*左右浮动 start*/
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+/*左右浮动 end*/
+
+/*清浮动 start*/
+.clearfix:after{
+    display:block;
+    content:'';
+    clear:both;
+}
+.clearfix{
+    zoom:1;
+}
+/*清浮动 end*/
