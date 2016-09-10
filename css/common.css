@@ -141,6 +141,7 @@ header{
     line-height: 140px;
     letter-spacing:6px;
     transform:translate(3000px,0);
+    -webkit-transform:translate(3000px,0);
 }
 .bg-container{
     position: absolute;
@@ -191,6 +192,7 @@ header{
     font-size: 20px;
     color: #907fbf;
     transform:translate(3000px,0);
+    -webkit-transform:translate(3000px,0);
 }
 .service-text{
     position: absolute;
@@ -200,6 +202,7 @@ header{
     font-size: 16px;
     color: #907fbf;
     transform:translate(3000px,0);
+    -webkit-transform:translate(3000px,0);
 }
 .tab-container{
     position: absolute;
@@ -209,6 +212,7 @@ header{
     height: 400px;
     overflow: hidden;
     transform:translate(3000px,0);
+    -webkit-transform:translate(3000px,0);
 }
 .tab-main{
     position: absolute;
@@ -250,6 +254,7 @@ header{
     color:#222;
     text-align: center;
     transform:scale(1,2);
+    -webkit-transform:scale(1,2);
     cursor:pointer;
 }
 .tab-prev{
@@ -280,6 +285,7 @@ header{
     line-height: 140px;
     letter-spacing:6px;
     transform:translateX(3000px);
+    -webkit-transform:translateX(3000px);
 }
 .work-type{
     position: absolute;
@@ -291,6 +297,7 @@ header{
 .work-type li{
     float: left;
     transform:translateX(3000px);
+    -webkit-transform:translateX(3000px);
 }
 .work-type li a{
     color:#fff;
@@ -410,7 +417,8 @@ header{
     margin: 20px;
     cursor:pointer;
     background: url(../img/android.png) no-repeat;
-    transform:translateY(5000px);
+    transform:translateY(-5000px);
+    -webkit-transform:translateY(-5000px);
 }
 .contact-app .ios{background: url(../img/ios.png) no-repeat;}
 .contact-app .other{background: url(../img/other.png) no-repeat;}
