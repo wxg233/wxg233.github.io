@@ -1,5 +1,5 @@
-//开门效果 start
-(function($,document){
+//资源加载 start
+(function($){
 	$(function(){
 		var oC=$('#circle_load').get(0);
 		var gd=oC.getContext('2d');
@@ -53,31 +53,31 @@
 		imageLoad(aImgSource,function(){
 			$(oC).fadeOut('300',function(){
 				clearInterval(oC.timer);
-				$('.left-door').animate({'width':0});
-				$('.right-door').animate({'width':0},{'complete':function(){
-					$('.main-container').addClass('swing');
-					$('.nav-container').addClass('flash');
+				$('#left_door').animate({'width':0});
+				$('#right_door').animate({'width':0},{'complete':function(){
+					$('#main_container').addClass('swing');
+					$('#nav_container').addClass('flash');
 				}});
 			});
 		})
 	});
-})(jQuery,document);
-//开门效果 end
+})(jQuery);
+//资源加载 end
 
 //HOME start
 (function($){
 	$(function(){
-		var aNav=$('.nav-bar li a');
+		var aNav=$('#nav_bar li a');
 		aNav.eq(0).on('click',function(){
 			$('html,body').animate({'scrollTop':'0px'});
 		});
-		$('.header-bar').on('click',function(){
+		$('#header_bar').on('click',function(){
 			$('html,body').animate({'scrollTop':'0px'});
 		});
 		aNav.eq(1).on('click',function(){
 			$('html,body').animate({'scrollTop':'630px'});
 		});
-		$('.nav-container').on('click',function(){
+		$('#nav_container').on('click',function(){
 			$('html,body').animate({'scrollTop':'630px'});
 		});
 		aNav.eq(2).on('click',function(){
@@ -95,23 +95,23 @@
 	$(function(){
 		$(document).on('scroll',function(){
 			if($(document).scrollTop()>=200){
-				$('.service-header').addClass('bounceInRight');
+				$('#service_header').addClass('bounceInRight');
 			}
 			if($(document).scrollTop()>=400){
-				$('.tab-container').addClass('bounceInLeft');
+				$('#tab_container').addClass('bounceInLeft');
 				setTimeout(function(){
-					$('.service-title').addClass('bounceInLeft');
+					$('#service_title').addClass('bounceInLeft');
 				},300);
 				setTimeout(function(){
-					$('.service-text').addClass('bounceInLeft');
+					$('#service_text').addClass('bounceInLeft');
 				},600);
 
 			}
 		});
-		var oTab=$('.tab-container');
-		var oUl=$('.tab-main');
-		var aBtn=$('.tab-tip li');
-		var aLi=$('.tab-main li');
+		var oTab=$('#tab_container');
+		var oUl=$('#tab_main');
+		var aBtn=$('#tab_tip li');
+		var aLi=$('#tab_main li');
 		var n=1;
 		var m=aLi.length;
 		var x=-n*aLi.outerWidth();
@@ -144,13 +144,13 @@
 			n=$(this).index()+1;
 			tab();
 		});
-		$('.tab-prev').on('click',function(){
+		$('#tab_prev').on('click',function(){
 			if(!bOk)return;
 			bOk=false;
 			n--;
 			tab();
 		});
-		$('.tab-next').on('click',function(){
+		$('#tab_next').on('click',function(){
 			if(!bOk)return;
 			bOk=false;
 			n++;
@@ -174,16 +174,16 @@
 			console.log($(document).scrollTop());
 		});
 		$(document).on('scroll',function(){
-			var oType=$('.work-type');
-			var aLi=$('.work-list li');
+			var oType=$('#work_type');
+			var aLi=$('#work_list li');
 			if($(document).scrollTop()>=900){
-				$('.work-header').addClass('bounceInRight');
+				$('#work_header').addClass('bounceInRight');
 			}
 			if($(document).scrollTop()>=1000){
-				var n=$('.work-type li').length;
+				var n=$('#work_type li').length;
 				oType.timer=setInterval(function(){
 					n--;
-					$('.work-type li').eq(n).addClass('bounceInLeft');
+					$('#work_type li').eq(n).addClass('bounceInLeft');
 					if(n==0){clearInterval(oType.timer)}
 				},100);
 			}
@@ -209,14 +209,24 @@
 //CONTACT start
 (function($,document){
 	$(function(){
-		var aLi=$('.contact-app li');
-		var oCon=$('.contact-page');
+		var aLi=$('#contact_app li');
+		var oMethod=$('#contact_method');
 		var n=0;
+		oMethod.on('mouseover','li',function(){
+			$(this).addClass('tada');
+		}).on('mouseout','li',function(){
+			$(this).removeClass('tada');
+		}).on('click','li',function(){
+			alert('既然都看到这里了，何不邀我做个面试呢 ^_^');
+		});
 		$(document).on('scroll',function(){
 			if($(document).scrollTop()>=1700){
-				oCon.timer=setInterval(function(){
+				var timer=setInterval(function(){
 					aLi.eq(n).addClass('bounceInDown');
 					n++;
+					if(n==3){
+						clearInterval(timer);
+					}
 				},200);
 			}
 		});

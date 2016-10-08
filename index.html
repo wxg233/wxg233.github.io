@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Creative Star</title>
-    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/animate.css">
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
-<!--开门 start-->
-<div class="left-door door"></div>
-<div class="right-door door"></div>
+<!--资源加载 start-->
+<div id="left_door" class="left-door door"></div>
+<div id="right_door" class="right-door door"></div>
 <canvas id="circle_load" class="circle-load" width="200" height="200"></canvas>
-<!--开门 end-->
+<!--资源加载 end-->
 
 <!--头部 start-->
 <header class="clearfix">
-    <h1 class="header-bar"><a href="javascript:;">CREATIVE STAR<b></b></a></h1>
-    <ul class="nav-bar">
+    <h1 id="header_bar" class="header-bar"><a href="javascript:;">CREATIVE STAR<b></b></a></h1>
+    <ul id="nav_bar" class="nav-bar">
         <li><a href="javascript:;">HOME</a></li>
         <li><a href="javascript:;">SERVICES</a></li>
         <li><a href="javascript:;">OUR WORKS</a></li>
@@ -31,27 +31,27 @@
 <!--首页 start-->
 <section class="home-page">
     <div class="space-container"></div>
-    <div class="main-container animated">
+    <div id="main_container" class="main-container animated">
         <h2>HERE WE CREATIVE</h2>
         <p>follow our step</p>
     </div>
-    <a class="nav-container animated infinite" href="javascript:;"></a>
+    <a id="nav_container" class="nav-container animated infinite" href="javascript:;"></a>
 </section>
 <!--首页 end-->
 
 <!--SERVICES start-->
 <section class="service-page">
-    <h2 class="service-header animated">OUR SERVICES</h2>
+    <h2 id="service_header" class="service-header animated">OUR SERVICES</h2>
     <div class="bg-container"></div>
     <div class="bg-line bg-line1"></div>
     <div class="bg-line bg-line2"></div>
     <div class="bg-line bg-line3"></div>
     <div class="bg-line bg-line4"></div>
     <div class="bg-line bg-line5"></div>
-    <p class="service-title animated">What we do now?</p>
-    <p class="service-text animated">Lorem ipsum dolor sit amet, cadipiscing elit. Nullam dolor risus, efficitur ac ultricies quis, imperdiet sit amet nulla. dignissim mi insaer purus blandit, eget.</p>
-    <div class="tab-container animated">
-        <ul class="tab-main clearfix">
+    <p id="service_title" class="service-title animated">What we do now?</p>
+    <p id="service_text" class="service-text animated">Lorem ipsum dolor sit amet, cadipiscing elit. Nullam dolor risus, efficitur ac ultricies quis, imperdiet sit amet nulla. dignissim mi insaer purus blandit, eget.</p>
+    <div id="tab_container" class="tab-container animated">
+        <ul id="tab_main" class="tab-main clearfix">
             <li><img src="img/bg-04.jpg"></li>
             <li><img src="img/bg-01.jpg"></li>
             <li><img src="img/bg-02.jpg"></li>
@@ -59,22 +59,22 @@
             <li><img src="img/bg-04.jpg"></li>
             <li><img src="img/bg-01.jpg"></li>
         </ul>
-        <ol class="tab-tip clearfix">
+        <ol id="tab_tip" class="tab-tip clearfix">
             <li class="on"></li>
             <li></li>
             <li></li>
             <li></li>
         </ol>
-        <span class="tab-prev">&lt;</span>
-        <span class="tab-next">&gt;</span>
+        <span id="tab_prev" class="tab-prev">&lt;</span>
+        <span id="tab_next" class="tab-next">&gt;</span>
     </div>
 </section>
 <!--SERVICES end-->
 
 <!--WORK start-->
 <section class="work-page">
-    <h2 class="work-header animated">OUR WORKS</h2>
-    <ul class="work-type">
+    <h2 id="work_header" class="work-header animated">OUR WORKS</h2>
+    <ul id="work_type" class="work-type">
         <li class="animated"><a href="javascript:;">all</a></li>
         <li class="animated"><a href="javascript:;">applications</a></li>
         <li class="animated"><a href="javascript:;">logo</a></li>
@@ -82,7 +82,7 @@
         <li class="animated"><a href="javascript:;">print</a></li>
         <li class="animated"><a href="javascript:;">web Design</a></li>
     </ul>
-    <ul class="work-list clearfix">
+    <ul id="work_list" class="work-list clearfix">
         <li class="animated"><img src="img/1.jpg"><span>WORK NO.1</span></li>
         <li class="animated"><img src="img/2.jpg"><span>WORK NO.2</span></li>
         <li class="animated"><img src="img/3.jpg"><span>WORK NO.3</span></li>
@@ -96,22 +96,22 @@
 <!--WORK end-->
 
 <!--CONTACT start-->
-<footer class="contact-page">
+<footer id="contact_page" class="contact-page">
     <div class="contact-mask"></div>
     <h2 class="contact-header animated">CONTACT WITH US</h2>
     <div class="contact-type">
         <p><strong>Call:</strong>010-12345678</p>
         <p><strong>E-mail:</strong>wxg233@sina.com</p>
-        <p><strong>Web:</strong>https://wxg233.github.io</p>
-        <p><strong>Address:</strong>Changping-Beijing</p>
+        <p><strong>Web:</strong>www.wxg233.github.io</p>
+        <p><strong>Address:</strong>changping-beijing</p>
     </div>
-    <ul class="contact-method">
-        <li class="facebook"></li>
-        <li class="twitter"></li>
-        <li class="linkedin"></li>
-        <li class="git"></li>
+    <ul id="contact_method" class="contact-method">
+        <li class="facebook animated"></li>
+        <li class="twitter animated"></li>
+        <li class="linkedin animated"></li>
+        <li class="git animated"></li>
     </ul>
-    <ul class="contact-app">
+    <ul id="contact_app" class="contact-app">
         <li class="android animated"></li>
         <li class="ios animated"></li>
         <li class="other animated"></li>

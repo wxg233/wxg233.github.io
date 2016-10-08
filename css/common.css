@@ -1,4 +1,4 @@
-/*开门 start*/
+/*资源加载 start*/
 .door{
     z-index:998;
     width: 50%;
@@ -18,7 +18,7 @@
     margin-left: -100px;
     background: #222;
 }
-/*开门 end*/
+/*资源加载 end*/
 
 /*头部 start*/
 header{
