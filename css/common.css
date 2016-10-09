@@ -1,3 +1,11 @@
+html,body{
+    background: #222;
+}
+.main-content{
+    width: 1360px;
+    margin:0 auto;
+    position: relative;
+}
 /*资源加载 start*/
 .door{
     z-index:998;
@@ -29,9 +37,13 @@ header{
     width: 100%;
     background: #221e2d;
 }
+.header-container{
+    width: 1360px;
+    margin:0 auto;
+}
 .header-bar{
     float: left;
-    padding-left:80px;
+    padding-left:40px;
     line-height: 90px;
 }
 .header-bar a{
@@ -48,7 +60,7 @@ header{
 }
 .nav-bar{
     float: right;
-    padding-right: 100px;
+    padding-right: 40px;
     line-height: 90px;
 }
 .nav-bar li{
